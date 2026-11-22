@@ -1,0 +1,17 @@
+manifest: /app/persistent/manifests/facevent_train.csv
+output_dir: /app/persistent/reconstruction/acc
+representation: acc
+image_size: 224
+sequence_length: 8
+event_height: 180
+event_width: 240
+timestamp_unit: s
+event_layout: txyP
+teacher_type: faceptor
+faceptor_factory: facial_analysis.faceptor_factory:make_faceptor_backbone
+epochs: 10
+batch_size: 1
+num_workers: 4
+learning_rate: 0.0001
+amp: true
+seed: 44
